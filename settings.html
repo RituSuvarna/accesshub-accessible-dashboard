@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | AccessHub</title>
+
+    <meta
+        name="description"
+        content="Configure accessibility and notification preferences for AccessHub."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header class="site-header">
+
+    <div class="brand">
+        <a href="index.html" aria-label="AccessHub home">
+            <span class="brand-mark" aria-hidden="true">A</span>
+
+            <span>
+                <strong>AccessHub</strong>
+                <small>Accessibility Operations</small>
+            </span>
+        </a>
+    </div>
+
+    <div class="header-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        Platform Active
+    </div>
+
+    <button
+        type="button"
+        id="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+    >
+        Menu
+    </button>
+
+</header>
+
+<nav id="primary-navigation" aria-label="Primary navigation">
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="services.html">
+                Services
+            </a>
+        </li>
+
+        <li>
+            <a href="reports.html">
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html" aria-current="page">
+                Settings
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<main id="main-content">
+
+    <section class="page-intro" aria-labelledby="settings-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                PLATFORM PREFERENCES
+            </span>
+
+            <h1 id="settings-heading">
+                Accessibility Settings
+            </h1>
+
+            <p>
+                Adjust interface and notification preferences to
+                support different ways of interacting with AccessHub.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section aria-labelledby="appearance-heading">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                PERSONALIZE
+            </span>
+
+            <h2 id="appearance-heading">
+                Display Preferences
+            </h2>
+
+            <p>
+                Choose settings that make the interface easier
+                to read and use.
+            </p>
+
+        </div>
+
+        <form
+            id="settings-form"
+            action="settings.html"
+            method="get"
+        >
+
+            <fieldset>
+
+                <legend>
+                    Accessibility preferences
+                </legend>
+
+                <div class="form-field">
+
+                    <label for="font-size">
+                        Text size
+                    </label>
+
+                    <select
+                        id="font-size"
+                        name="font-size"
+                    >
+
+                        <option value="standard">
+                            Standard
+                        </option>
+
+                        <option value="large">
+                            Large
+                        </option>
+
+                        <option value="extra-large">
+                            Extra Large
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="checkbox-field">
+
+                    <input
+                        type="checkbox"
+                        id="reduced-motion"
+                        name="reduced-motion"
+                    >
+
+                    <label for="reduced-motion">
+                        Reduce motion
+                    </label>
+
+                </div>
+
+                <small>
+                    Reduces animations and movement across the interface.
+                </small>
+
+                <div class="checkbox-field">
+
+                    <input
+                        type="checkbox"
+                        id="high-contrast"
+                        name="high-contrast"
+                    >
+
+                    <label for="high-contrast">
+                        High contrast mode
+                    </label>
+
+                </div>
+
+                <small>
+                    Increases contrast between interface elements and text.
+                </small>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>
+                    Notification preferences
+                </legend>
+
+                <div class="checkbox-field">
+
+                    <input
+                        type="checkbox"
+                        id="issue-alerts"
+                        name="issue-alerts"
+                        checked
+                    >
+
+                    <label for="issue-alerts">
+                        Accessibility issue alerts
+                    </label>
+
+                </div>
+
+                <small>
+                    Show notifications when accessibility issues
+                    are recorded.
+                </small>
+
+                <div class="checkbox-field">
+
+                    <input
+                        type="checkbox"
+                        id="weekly-summary"
+                        name="weekly-summary"
+                        checked
+                    >
+
+                    <label for="weekly-summary">
+                        Weekly accessibility summary
+                    </label>
+
+                </div>
+
+                <small>
+                    Enable a weekly summary of accessibility activity.
+                </small>
+
+            </fieldset>
+
+            <div class="form-actions">
+
+                <button
+                    type="submit"
+                    id="save-settings"
+                    class="button button-primary"
+                >
+                    Save Preferences
+                </button>
+
+            </div>
+
+            <p
+                id="settings-status"
+                class="form-status"
+                aria-live="polite"
+            ></p>
+
+        </form>
+
+    </section>
+
+    <section aria-labelledby="accessibility-support-heading">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                NEED HELP?
+            </span>
+
+            <h2 id="accessibility-support-heading">
+                Accessibility Support
+            </h2>
+
+            <p>
+                If you discover an accessibility barrier while using
+                the platform, record it through the reporting system.
+            </p>
+
+        </div>
+
+        <a
+            class="button button-secondary"
+            href="reports.html"
+        >
+            Report an Accessibility Issue
+        </a>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <p>
+        <strong>AccessHub</strong> — Digital Accessibility Operations Platform
+    </p>
+
+    <p>
+        &copy; 2026 AccessHub. Internship demonstration project.
+    </p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

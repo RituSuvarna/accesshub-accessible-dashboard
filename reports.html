@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | AccessHub</title>
+
+    <meta
+        name="description"
+        content="Report and track digital accessibility barriers using AccessHub."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header class="site-header">
+
+    <div class="brand">
+        <a href="index.html" aria-label="AccessHub home">
+            <span class="brand-mark" aria-hidden="true">A</span>
+            <span>
+                <strong>AccessHub</strong>
+                <small>Accessibility Operations</small>
+            </span>
+        </a>
+    </div>
+
+    <div class="header-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        Platform Active
+    </div>
+
+    <button
+        type="button"
+        id="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+    >
+        Menu
+    </button>
+
+</header>
+
+<nav id="primary-navigation" aria-label="Primary navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li>
+            <a href="reports.html" aria-current="page">
+                Reports
+            </a>
+        </li>
+        <li><a href="settings.html">Settings</a></li>
+    </ul>
+</nav>
+
+<main id="main-content">
+
+    <section class="page-intro" aria-labelledby="reports-heading">
+
+        <div>
+            <span class="eyebrow">
+                ISSUE MANAGEMENT
+            </span>
+
+            <h1 id="reports-heading">
+                Accessibility Reports
+            </h1>
+
+            <p>
+                Document accessibility barriers, assign priority,
+                and keep a record of improvement work.
+            </p>
+        </div>
+
+        <div class="intro-stat">
+            <strong id="report-count">0</strong>
+            <span>Reports recorded</span>
+        </div>
+
+    </section>
+
+    <section aria-labelledby="report-guidance-heading">
+
+        <div class="section-heading">
+            <span class="eyebrow">REPORTING GUIDANCE</span>
+
+            <h2 id="report-guidance-heading">
+                Capture useful accessibility information
+            </h2>
+
+            <p>
+                Include enough detail for another person to
+                understand and reproduce the accessibility barrier.
+            </p>
+        </div>
+
+        <button
+            type="button"
+            id="open-guidance"
+            class="button button-secondary"
+        >
+            View Reporting Guidance
+        </button>
+
+    </section>
+
+    <section aria-labelledby="report-form-heading">
+
+        <div class="section-heading">
+            <span class="eyebrow">NEW REPORT</span>
+
+            <h2 id="report-form-heading">
+                Report an Accessibility Issue
+            </h2>
+
+            <p>
+                All fields are required unless marked optional.
+            </p>
+        </div>
+
+        <form
+            id="accessibility-report-form"
+            action="reports.html"
+            method="get"
+        >
+
+            <fieldset>
+
+                <legend>
+                    Issue information
+                </legend>
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="service">
+                            Digital service
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service"
+                            required
+                        >
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option value="Citizen Service Portal">
+                                Citizen Service Portal
+                            </option>
+
+                            <option value="Student Support Portal">
+                                Student Support Portal
+                            </option>
+
+                            <option value="Digital Health Booking">
+                                Digital Health Booking
+                            </option>
+
+                            <option value="Employment Assistance Portal">
+                                Employment Assistance Portal
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label for="issue-type">
+                            Issue type
+                        </label>
+
+                        <select
+                            id="issue-type"
+                            name="issue-type"
+                            required
+                        >
+                            <option value="">
+                                Select issue type
+                            </option>
+
+                            <option value="Keyboard Navigation">
+                                Keyboard Navigation
+                            </option>
+
+                            <option value="Screen Reader">
+                                Screen Reader
+                            </option>
+
+                            <option value="Colour Contrast">
+                                Colour Contrast
+                            </option>
+
+                            <option value="Forms">
+                                Forms
+                            </option>
+
+                            <option value="Semantic Structure">
+                                Semantic Structure
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label for="priority">
+                            Priority
+                        </label>
+
+                        <select
+                            id="priority"
+                            name="priority"
+                            required
+                        >
+                            <option value="">
+                                Select priority
+                            </option>
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option value="Medium">
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="description">
+                        Issue description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="6"
+                        required
+                        placeholder="Describe the accessibility barrier, affected users, and relevant page or component..."
+                    ></textarea>
+
+                    <small>
+                        Example: Explain what happens, where it happens,
+                        and how the issue affects interaction.
+                    </small>
+
+                </div>
+
+            </fieldset>
+
+            <div class="form-actions">
+
+                <button
+                    type="submit"
+                    class="button button-primary"
+                >
+                    Submit Accessibility Report
+                </button>
+
+            </div>
+
+            <p
+                id="form-status"
+                class="form-status"
+                aria-live="polite"
+            ></p>
+
+        </form>
+
+    </section>
+
+    <section aria-labelledby="recent-reports-heading">
+
+        <div class="section-heading">
+            <span class="eyebrow">REPORT HISTORY</span>
+
+            <h2 id="recent-reports-heading">
+                Recent Accessibility Reports
+            </h2>
+
+            <p>
+                Reports recorded during this session.
+            </p>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <caption>
+                    Recently submitted accessibility reports
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Service</th>
+                        <th scope="col">Issue</th>
+                        <th scope="col">Priority</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+
+                <tbody id="reports-table-body">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <aside class="notice-card" aria-labelledby="reports-note-heading">
+
+        <div>
+            <span class="eyebrow">GOOD PRACTICE</span>
+
+            <h2 id="reports-note-heading">
+                Describe the barrier, not the person
+            </h2>
+
+            <p>
+                Accessibility reports should focus on the interface
+                behaviour and the barrier experienced by the user.
+                Clear descriptions make remediation easier.
+            </p>
+        </div>
+
+    </aside>
+
+</main>
+
+<dialog id="guidance-dialog" aria-labelledby="guidance-title">
+
+    <section>
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                REPORTING GUIDANCE
+            </span>
+
+            <h2 id="guidance-title">
+                What makes a useful report?
+            </h2>
+
+        </div>
+
+        <ul>
+            <li>Identify the affected digital service.</li>
+            <li>Choose the accessibility issue category.</li>
+            <li>Assign a priority based on impact.</li>
+            <li>Describe what happens and where it occurs.</li>
+            <li>Explain the barrier clearly and objectively.</li>
+        </ul>
+
+        <button
+            type="button"
+            id="close-guidance"
+            class="button button-primary"
+        >
+            Close Guidance
+        </button>
+
+    </section>
+
+</dialog>
+
+<footer class="site-footer">
+
+    <p>
+        <strong>AccessHub</strong> — Digital Accessibility Operations Platform
+    </p>
+
+    <p>
+        &copy; 2026 AccessHub. Internship demonstration project.
+    </p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

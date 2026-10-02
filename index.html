@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AccessHub | Digital Accessibility Operations</title>
+
+    <meta
+        name="description"
+        content="AccessHub is a digital accessibility operations platform for monitoring services, reporting barriers, and tracking improvements."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header class="site-header">
+    <div class="brand">
+        <a href="index.html" aria-label="AccessHub home">
+            <span class="brand-mark" aria-hidden="true">A</span>
+            <span>
+                <strong>AccessHub</strong>
+                <small>Accessibility Operations</small>
+            </span>
+        </a>
+    </div>
+
+   <div class="header-status">
+    <span class="status-dot" aria-hidden="true"></span>
+    Platform Active
+</div>
+
+    <button
+        type="button"
+        id="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+    >
+        Menu
+    </button>
+</header>
+
+<nav id="primary-navigation" aria-label="Primary navigation">
+    <ul>
+        <li>
+            <a href="index.html" aria-current="page">Home</a>
+        </li>
+        <li>
+            <a href="dashboard.html">Dashboard</a>
+        </li>
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+        <li>
+            <a href="reports.html">Reports</a>
+        </li>
+        <li>
+            <a href="settings.html">Settings</a>
+        </li>
+    </ul>
+</nav>
+
+<main id="main-content">
+
+    <section class="hero-section" aria-labelledby="welcome-heading">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                DIGITAL ACCESSIBILITY OPERATIONS
+            </span>
+
+            <h1 id="welcome-heading">
+                Make every digital service
+                <span>more accessible.</span>
+            </h1>
+
+            <p class="hero-text">
+                AccessHub gives organizations one workspace to
+                monitor accessibility, identify barriers, report
+                issues, and track improvements across digital services.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button button-primary" href="dashboard.html">
+                    Open Dashboard
+                </a>
+
+                <a class="button button-secondary" href="reports.html">
+                    Report an Issue
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-panel">
+
+            <div class="hero-panel-top">
+                <span>Accessibility Health</span>
+                <span class="mini-status">LIVE</span>
+            </div>
+
+            <div class="health-score">
+                <strong>86%</strong>
+                <span>Overall accessibility score</span>
+            </div>
+
+            <div class="health-line">
+                <span style="width: 86%"></span>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>24</strong>
+                    <span>Services</span>
+                </div>
+
+                <div>
+                    <strong>18</strong>
+                    <span>Open issues</span>
+                </div>
+
+                <div>
+                    <strong>42</strong>
+                    <span>Resolved</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section aria-labelledby="purpose-heading">
+
+        <div class="section-heading">
+            <span class="eyebrow">WHY ACCESSHUB?</span>
+
+            <h2 id="purpose-heading">
+                Accessibility operations in one place
+            </h2>
+
+            <p>
+                Instead of treating accessibility as a one-time audit,
+                AccessHub helps teams continuously monitor services,
+                document barriers, and follow improvements.
+            </p>
+        </div>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">01</span>
+                <h3>Monitor</h3>
+                <p>
+                    Track accessibility health across multiple
+                    digital services from one workspace.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">02</span>
+                <h3>Identify</h3>
+                <p>
+                    Record barriers involving keyboard access,
+                    forms, contrast, structure, and more.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">03</span>
+                <h3>Improve</h3>
+                <p>
+                    Prioritize accessibility work and track issues
+                    from identification through resolution.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section aria-labelledby="workflow-heading">
+
+        <div class="section-heading">
+            <span class="eyebrow">ACCESSIBILITY WORKFLOW</span>
+
+            <h2 id="workflow-heading">
+                From barrier to improvement
+            </h2>
+        </div>
+
+        <ol class="workflow">
+
+            <li>
+                <span>01</span>
+                <div>
+                    <h3>Monitor services</h3>
+                    <p>
+                        Review accessibility status across digital
+                        services.
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <span>02</span>
+                <div>
+                    <h3>Report barriers</h3>
+                    <p>
+                        Capture accessibility issues with useful
+                        descriptions and priority levels.
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <span>03</span>
+                <div>
+                    <h3>Track progress</h3>
+                    <p>
+                        Follow improvement activities and resolution
+                        status.
+                    </p>
+                </div>
+            </li>
+
+        </ol>
+
+    </section>
+
+    <aside class="notice-card" aria-labelledby="demo-heading">
+
+        <div>
+            <span class="eyebrow">PROJECT NOTICE</span>
+
+            <h2 id="demo-heading">
+                Built with accessibility in mind
+            </h2>
+
+            <p>
+                AccessHub itself follows semantic HTML, keyboard
+                accessibility, visible focus indicators, accessible
+                forms, meaningful headings, responsive design, and
+                reduced-motion principles.
+            </p>
+        </div>
+
+        <a class="button button-secondary" href="dashboard.html">
+            Explore Platform
+        </a>
+
+    </aside>
+
+</main>
+
+<footer class="site-footer">
+    <p>
+        <strong>AccessHub</strong> — Digital Accessibility Operations Platform
+    </p>
+
+    <p>
+        &copy; 2026 AccessHub. Internship demonstration project.
+    </p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

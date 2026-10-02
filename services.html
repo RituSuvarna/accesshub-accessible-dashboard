@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services | AccessHub</title>
+
+    <meta
+        name="description"
+        content="Monitor digital services and review their accessibility status with AccessHub."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header class="site-header">
+
+    <div class="brand">
+        <a href="index.html" aria-label="AccessHub home">
+            <span class="brand-mark" aria-hidden="true">A</span>
+
+            <span>
+                <strong>AccessHub</strong>
+                <small>Accessibility Operations</small>
+            </span>
+        </a>
+    </div>
+
+    <div class="header-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        Platform Active
+    </div>
+
+    <button
+        type="button"
+        id="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+    >
+        Menu
+    </button>
+
+</header>
+
+<nav id="primary-navigation" aria-label="Primary navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li>
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="services.html" aria-current="page">
+                Services
+            </a>
+        </li>
+
+        <li>
+            <a href="reports.html">
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="settings.html">
+                Settings
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main id="main-content">
+
+    <section class="page-intro" aria-labelledby="services-heading">
+
+        <div>
+            <span class="eyebrow">
+                SERVICE MONITORING
+            </span>
+
+            <h1 id="services-heading">
+                Digital Services
+            </h1>
+
+            <p>
+                Review accessibility health, open issues, and
+                improvement status across monitored digital services.
+            </p>
+        </div>
+
+        <div class="intro-stat">
+            <strong>24</strong>
+            <span>Services monitored</span>
+        </div>
+
+    </section>
+
+    <section aria-labelledby="filter-heading">
+
+        <div class="section-heading">
+            <span class="eyebrow">FIND A SERVICE</span>
+
+            <h2 id="filter-heading">
+                Search &amp; Filter
+            </h2>
+        </div>
+
+        <form id="service-filter-form">
+
+            <fieldset>
+
+                <legend>
+                    Service filters
+                </legend>
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="service-search">
+                            Search services
+                        </label>
+
+                        <input
+                            type="search"
+                            id="service-search"
+                            name="service-search"
+                            placeholder="Search by service name..."
+                        >
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label for="service-category">
+                            Category
+                        </label>
+
+                        <select
+                            id="service-category"
+                            name="service-category"
+                        >
+                            <option value="">
+                                All categories
+                            </option>
+
+                            <option value="Public Services">
+                                Public Services
+                            </option>
+
+                            <option value="Education">
+                                Education
+                            </option>
+
+                            <option value="Healthcare">
+                                Healthcare
+                            </option>
+
+                            <option value="Employment">
+                                Employment
+                            </option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="button button-primary"
+                    >
+                        Apply Filters
+                    </button>
+
+                    <button
+                        type="button"
+                        id="clear-service-filters"
+                        class="button button-secondary"
+                    >
+                        Clear Filters
+                    </button>
+
+                </div>
+
+            </fieldset>
+
+        </form>
+
+        <p
+            id="service-filter-status"
+            class="form-status"
+            aria-live="polite"
+        ></p>
+
+    </section>
+
+    <section aria-labelledby="service-list-heading">
+
+        <div class="section-heading">
+            <span class="eyebrow">MONITORED SERVICES</span>
+
+            <h2 id="service-list-heading">
+                Accessibility Service Register
+            </h2>
+
+            <p>
+                Current accessibility status for monitored services.
+            </p>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <caption>
+                    Monitored digital services and accessibility status
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Service</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Open Issues</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="services-table-body">
+
+                    <tr>
+                        <th scope="row">
+                            Citizen Service Portal
+                        </th>
+                        <td>Public Services</td>
+                        <td>92%</td>
+                        <td>3</td>
+                        <td>
+                            <span class="tag tag-success">
+                                Good
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            Student Support Portal
+                        </th>
+                        <td>Education</td>
+                        <td>84%</td>
+                        <td>6</td>
+                        <td>
+                            <span class="tag tag-progress">
+                                Needs Improvement
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            Digital Health Booking
+                        </th>
+                        <td>Healthcare</td>
+                        <td>78%</td>
+                        <td>9</td>
+                        <td>
+                            <span class="tag tag-warning">
+                                Review Required
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            Employment Assistance Portal
+                        </th>
+                        <td>Employment</td>
+                        <td>89%</td>
+                        <td>4</td>
+                        <td>
+                            <span class="tag tag-success">
+                                Good
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <section aria-labelledby="monitoring-heading">
+
+        <div class="section-heading">
+            <span class="eyebrow">WHAT IS MONITORED?</span>
+
+            <h2 id="monitoring-heading">
+                Accessibility Review Areas
+            </h2>
+        </div>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">
+                    KB
+                </span>
+
+                <h3>Keyboard Access</h3>
+
+                <p>
+                    Navigation, focus order, focus visibility,
+                    and keyboard interaction.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">
+                    FM
+                </span>
+
+                <h3>Forms &amp; Inputs</h3>
+
+                <p>
+                    Labels, instructions, validation messages,
+                    and accessible controls.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">
+                    CR
+                </span>
+
+                <h3>Colour &amp; Contrast</h3>
+
+                <p>
+                    Text contrast, interface components,
+                    and meaningful visual information.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <aside class="notice-card" aria-labelledby="services-note-heading">
+
+        <div>
+
+            <span class="eyebrow">
+                DEMONSTRATION DATA
+            </span>
+
+            <h2 id="services-note-heading">
+                Accessibility scores are sample data
+            </h2>
+
+            <p>
+                The services and accessibility scores shown in this
+                internship demonstration are fictional sample data.
+                They do not represent official accessibility
+                certifications or audits.
+            </p>
+
+        </div>
+
+    </aside>
+
+</main>
+
+<footer class="site-footer">
+
+    <p>
+        <strong>AccessHub</strong> — Digital Accessibility Operations Platform
+    </p>
+
+    <p>
+        &copy; 2026 AccessHub. Internship demonstration project.
+    </p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

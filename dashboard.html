@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | AccessHub</title>
+
+    <meta
+        name="description"
+        content="AccessHub accessibility operations dashboard for monitoring digital services and accessibility improvements."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">
+    Skip to main content
+</a>
+
+<header class="site-header">
+
+    <div class="brand">
+        <a href="index.html" aria-label="AccessHub home">
+            <span class="brand-mark" aria-hidden="true">A</span>
+
+            <span>
+                <strong>AccessHub</strong>
+                <small>Accessibility Operations</small>
+            </span>
+        </a>
+    </div>
+
+    <div class="header-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        Platform Active
+    </div>
+
+    <button
+        type="button"
+        id="menu-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+    >
+        Menu
+    </button>
+
+</header>
+
+<nav id="primary-navigation" aria-label="Primary navigation">
+
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="dashboard.html" aria-current="page">
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+
+        <li>
+            <a href="reports.html">Reports</a>
+        </li>
+
+        <li>
+            <a href="settings.html">Settings</a>
+        </li>
+    </ul>
+
+</nav>
+
+<main id="main-content">
+
+    <section
+        class="page-intro"
+        aria-labelledby="dashboard-heading"
+    >
+
+        <div>
+
+            <span class="eyebrow">
+                ACCESSIBILITY OPERATIONS
+            </span>
+
+            <h1 id="dashboard-heading">
+                Accessibility Overview
+            </h1>
+
+            <p>
+                Monitor digital services, identify accessibility
+                barriers, and track improvement activities from
+                one centralized workspace.
+            </p>
+
+        </div>
+
+        <div class="intro-action">
+
+            <a
+                class="button button-primary"
+                href="reports.html"
+            >
+                Report an Issue
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section aria-labelledby="summary-heading">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                CURRENT STATUS
+            </span>
+
+            <h2 id="summary-heading">
+                Accessibility Health
+            </h2>
+
+        </div>
+
+        <div class="metric-grid">
+
+            <article class="metric-card">
+
+                <span
+                    class="metric-icon"
+                    aria-hidden="true"
+                >01</span>
+
+                <h3>
+                    Services Monitored
+                </h3>
+
+                <strong>24</strong>
+
+                <p>
+                    Digital services currently tracked
+                </p>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <span
+                    class="metric-icon warning"
+                    aria-hidden="true"
+                >02</span>
+
+                <h3>
+                    Open Issues
+                </h3>
+
+                <strong id="dashboard-open-issues">
+                    18
+                </strong>
+
+                <p>
+                    Issues requiring attention
+                </p>
+
+            </article>
+
+
+            <article class="metric-card">
+
+                <span
+                    class="metric-icon success"
+                    aria-hidden="true"
+                >03</span>
+
+                <h3>
+                    Issues Resolved
+                </h3>
+
+                <strong>42</strong>
+
+                <p>
+                    Accessibility improvements completed
+                </p>
+
+            </article>
+
+
+            <article class="metric-card score-card">
+
+                <span
+                    class="metric-icon score"
+                    aria-hidden="true"
+                >04</span>
+
+                <h3>
+                    Accessibility Score
+                </h3>
+
+                <strong>86%</strong>
+
+                <p>
+                    Average across monitored services
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section aria-labelledby="priority-heading">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                ISSUE MANAGEMENT
+            </span>
+
+            <h2 id="priority-heading">
+                Issue Priority Breakdown
+            </h2>
+
+            <p>
+                Current accessibility reports grouped by priority.
+            </p>
+
+        </div>
+
+        <div class="priority-grid">
+
+            <article class="priority-card priority-high">
+
+                <div
+                    class="priority-symbol"
+                    aria-hidden="true"
+                >!</div>
+
+                <div>
+
+                    <h3>High Priority</h3>
+
+                    <strong id="high-priority-count">
+                        0
+                    </strong>
+
+                    <p>
+                        Requires urgent attention
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="priority-card priority-medium">
+
+                <div
+                    class="priority-symbol"
+                    aria-hidden="true"
+                >!</div>
+
+                <div>
+
+                    <h3>Medium Priority</h3>
+
+                    <strong id="medium-priority-count">
+                        0
+                    </strong>
+
+                    <p>
+                        Requires planned improvement
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="priority-card priority-low">
+
+                <div
+                    class="priority-symbol"
+                    aria-hidden="true"
+                >✓</div>
+
+                <div>
+
+                    <h3>Low Priority</h3>
+
+                    <strong id="low-priority-count">
+                        0
+                    </strong>
+
+                    <p>
+                        Suitable for routine review
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section aria-labelledby="attention-heading">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                AREAS TO WATCH
+            </span>
+
+            <h2 id="attention-heading">
+                Priority Attention
+            </h2>
+
+            <p>
+                Accessibility areas currently requiring review
+                or improvement.
+            </p>
+
+        </div>
+
+        <div class="attention-grid">
+
+            <article class="attention-card">
+
+                <span class="tag tag-warning">
+                    REVIEW REQUIRED
+                </span>
+
+                <h3>
+                    Keyboard Navigation
+                </h3>
+
+                <p>
+                    Several services require improved keyboard
+                    focus visibility and navigation order.
+                </p>
+
+            </article>
+
+
+            <article class="attention-card">
+
+                <span class="tag tag-progress">
+                    IN PROGRESS
+                </span>
+
+                <h3>
+                    Form Accessibility
+                </h3>
+
+                <p>
+                    Some forms require clearer labels,
+                    instructions, and validation feedback.
+                </p>
+
+            </article>
+
+
+            <article class="attention-card">
+
+                <span class="tag tag-monitor">
+                    MONITORING
+                </span>
+
+                <h3>
+                    Color Contrast
+                </h3>
+
+                <p>
+                    Interface components require additional
+                    contrast review.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section aria-labelledby="activity-heading">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                ACTIVITY
+            </span>
+
+            <h2 id="activity-heading">
+                Recent Accessibility Activity
+            </h2>
+
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <caption>
+                    Recent accessibility improvement activities
+                </caption>
+
+                <thead>
+
+                    <tr>
+                        <th scope="col">Activity</th>
+                        <th scope="col">Service</th>
+                        <th scope="col">Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <th scope="row">
+                            Keyboard navigation review
+                        </th>
+
+                        <td>
+                            Citizen Service Portal
+                        </td>
+
+                        <td>
+                            <span class="tag tag-success">
+                                Completed
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <th scope="row">
+                            Form accessibility review
+                        </th>
+
+                        <td>
+                            Student Support Portal
+                        </td>
+
+                        <td>
+                            <span class="tag tag-progress">
+                                In Progress
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <th scope="row">
+                            Contrast assessment
+                        </th>
+
+                        <td>
+                            Digital Health Booking
+                        </td>
+
+                        <td>
+                            <span class="tag tag-warning">
+                                Review Required
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <section aria-labelledby="quick-actions-heading">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                QUICK ACTIONS
+            </span>
+
+            <h2 id="quick-actions-heading">
+                Continue accessibility work
+            </h2>
+
+        </div>
+
+        <div class="action-grid">
+
+            <a
+                class="action-card"
+                href="services.html"
+            >
+
+                <span aria-hidden="true">→</span>
+
+                <strong>
+                    Review Digital Services
+                </strong>
+
+                <small>
+                    View monitored services and accessibility status.
+                </small>
+
+            </a>
+
+
+            <a
+                class="action-card"
+                href="reports.html"
+            >
+
+                <span aria-hidden="true">+</span>
+
+                <strong>
+                    Report an Accessibility Issue
+                </strong>
+
+                <small>
+                    Document a new accessibility barrier.
+                </small>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <aside
+        class="notice-card"
+        aria-labelledby="dashboard-note-heading"
+    >
+
+        <div>
+
+            <span class="eyebrow">
+                ACCESSIBILITY NOTICE
+            </span>
+
+            <h2 id="dashboard-note-heading">
+                AccessHub is accessibility-focused
+            </h2>
+
+            <p>
+                The platform uses semantic HTML, keyboard-friendly
+                navigation, visible focus indicators, accessible
+                forms, meaningful headings, responsive layouts,
+                and reduced-motion support.
+            </p>
+
+        </div>
+
+    </aside>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <p>
+        <strong>AccessHub</strong>
+        — Digital Accessibility Operations Platform
+    </p>
+
+    <p>
+        &copy; 2026 AccessHub. Internship demonstration project.
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
